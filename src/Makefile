@@ -7,10 +7,10 @@ LDIR = ../lib
 
 LIBS = -lm -lsfml-graphics -lsfml-window -lsfml-system
 
-_DEPS = main.hpp const.hpp
+_DEPS = main.hpp const.hpp game.hpp grass.hpp
 DEPS = $(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ = main.o
+_OBJ = main.o game.o grass.o
 OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.c $(DEPS)
